@@ -136,11 +136,12 @@ const createAuthRouter = (authContext) =>
 
         // admin page, end
         // add base url for github react proj
-        {
-          basename: import.meta.env.BASE_URL,  // ✅ 加这一行！
-        }
+
       ],
     },
+    {
+      basename: import.meta.env.BASE_URL,  // add basename for router for github page
+    }
   ]);
 export function AppRouter() {
   const authContext = useContext(AuthContext);
