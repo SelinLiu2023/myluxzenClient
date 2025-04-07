@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     react()],
-    base: '/myluxzenClient/',
+    // base: '/myluxzenClient/',
     build: {
       outDir: 'docs', // 指定输出目录为 docs
     }
