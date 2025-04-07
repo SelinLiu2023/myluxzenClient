@@ -15,13 +15,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # 或你项目使用的其他版本
+          node-version: '14'  # or other version
 
       - name: Install dependencies
         run: npm install
 
       - name: Build
-        run: npm run build  # 确保你有正确的构建脚本
+        run: npm run build  
         env:
         REACT_APP_API_URL: ${{ secrets.VITE_SERVER_URL }}
 
@@ -29,4 +29,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./docs #change to /docs for github page
