@@ -139,10 +139,10 @@ const createAuthRouter = (authContext) =>
 
       ],
     },
-    {
-      basename: import.meta.env.BASE_URL,  // add basename for router for github page
-    }
-  ]);
+  ],
+  {
+    basename: import.meta.env.BASE_URL,  // add basename for router for github page
+  });
 export function AppRouter() {
   const authContext = useContext(AuthContext);
   // Warten, bis die Benutzerdaten geladen sind
