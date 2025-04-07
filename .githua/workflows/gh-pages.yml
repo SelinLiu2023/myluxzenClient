@@ -22,6 +22,8 @@ jobs:
 
       - name: Build
         run: npm run build  # 确保你有正确的构建脚本
+        env:
+        REACT_APP_API_URL: ${{ secrets.VITE_SERVER_URL }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
