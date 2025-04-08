@@ -82,6 +82,8 @@ export const BookingPage = ()=>{
         } else {//last step, send API and create booking ticket 
             try {
                 setLoadingBookingTicket(true);
+                console.log("✅ ENV CHECK:", import.meta.env.VITE_SERVER_URL);
+
                 const url = `${import.meta.env.VITE_SERVER_URL}/booking/create-booking`;
                 // console.log(".env urlTest", url);
                 const response = await fetch(url, {
