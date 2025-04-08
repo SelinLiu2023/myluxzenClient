@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     react()],
-    base: process.env.NODE_ENV === 'production' ? '/myluxzenClient/' : '/',
+    base: process.env.NODE_ENV === "production" ? "/myluxzenClient" : "",
     build: {
       outDir: 'docs', // 指定输出目录为 docs
     }
