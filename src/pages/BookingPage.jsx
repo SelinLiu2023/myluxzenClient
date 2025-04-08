@@ -21,6 +21,7 @@ export const BookingPage = ()=>{
     const totalSteps = 4;
     const {user} = useContext(AuthContext);
     const [loadingBookingTicket, setLoadingBookingTicket] = useState(false);
+    console.log("VITE_SERVER_URL:", import.meta.env.VITE_SERVER_URL);
 
     useEffect(()=>{
         if(user !== null){
